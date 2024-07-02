@@ -1,0 +1,53 @@
+<script>
+        const container = document.querySelector('.gradient-container');
+
+        function animateGradient() {
+            let time = 0;
+
+            function updateGradient() {
+                time += 0.02;
+                const wave = Math.sin(time) * 10;
+
+                document.querySelector('.gradient').style.backgroundPosition = `
+                    20% ${20 + wave}%, 
+                    35% ${25 + wave}%, 
+                    50% ${30 + wave}%, 
+                    50% ${60 + wave}%, 
+                    35% ${70 + wave}%, 
+                    65% ${35 + wave}%
+                `;
+
+                requestAnimationFrame(updateGradient);
+            }
+
+            updateGradient();
+        }
+
+        animateGradient();
+    
+        const container = document.querySelector('.gradient-blue-container');
+
+        function animateGradient() {
+            let time = 0;
+
+            function updateGradient() {
+                time += 0.02;
+                const wave = Math.sin(time) * 10;
+
+                document.querySelector('.gradient-blue').style.backgroundPosition = `
+                    20% ${20 + wave}%, 
+                    35% ${25 + wave}%, 
+                    50% ${30 + wave}%, 
+                    50% ${60 + wave}%, 
+                    35% ${70 + wave}%, 
+                    65% ${35 + wave}%
+                `;
+
+                requestAnimationFrame(updateGradient);
+            }
+
+            updateGradient();
+        }
+
+        animateGradient();
+    </script>
